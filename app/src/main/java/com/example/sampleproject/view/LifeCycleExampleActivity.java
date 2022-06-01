@@ -2,19 +2,38 @@ package com.example.sampleproject.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.sampleproject.R;
 
 public class LifeCycleExampleActivity extends AppCompatActivity {
 
+    private Button btnDialog;
+    private Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life_cycle_example);
         Log.d("LifeCycleExample", " -------- onCreate -------- ");
+
+        btnDialog = findViewById(R.id.btnDialog);
+        btnDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonOpenDialogClicked();
+
+
+            }
+        });
+    }
+
+    private void buttonOpenDialogClicked()  {
+        final CustomDialog dialog = new CustomDialog(this);
+        dialog.show();
     }
 
     @Override

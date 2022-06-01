@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SampleProject"
         tools:targetApi="31">
         <activity
+            android:name=".ServiceExampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.LifeCycleExampleActivity"
             android:exported="false" />
         <activity
