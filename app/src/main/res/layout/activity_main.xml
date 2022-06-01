@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools">
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-        <variable
-            name="viewModel"
-            type="com.example.sampleproject.viewmodel.LoginViewModel" />
-    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,33 +15,54 @@
             android:layout_margin="8dp"
             android:orientation="vertical">
 
+
             <EditText
                 android:id="@+id/inEmail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/inPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
-                android:text="@={viewModel.userEmail}" />
-
+                />
 
             <EditText
                 android:id="@+id/inPassword"
+                app:layout_constraintTop_toBottomOf="@+id/inEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="8dp"
-                android:text="@={viewModel.userPassword}" />
-
+               />
 
             <Button
+                android:id="@+id/btn_Main_Login"
+                app:layout_constraintTop_toBottomOf="@id/inPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:onClick="@{()-> viewModel.onLoginClicked()}"
                 android:text="LOGIN"
-                bind:toastMessage_2="@{viewModel.toastMessage}" />
+                />
+
+            <Button
+                android:id="@+id/btn_Main_Lifecycle"
+                app:layout_constraintTop_toBottomOf="@id/btn_Main_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Lifecycle example"
+               />
+
+            <Button
+                android:id="@+id/btn_Main_Service"
+                app:layout_constraintTop_toBottomOf="@id/btn_Main_Lifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="service example"
+               />
 
 
         </LinearLayout>
