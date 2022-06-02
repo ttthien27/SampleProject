@@ -22,14 +22,18 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnLife;
-    private Button btnService;
+    private Button btnComponent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        activityMainBinding.setViewModel(new LoginViewModel());
+        activityMainBinding.executePendingBindings();
+
         btnLife = findViewById(R.id.btn_Main_Lifecycle);
-        btnService = findViewById(R.id.btn_Main_Service);
+        btnComponent = findViewById(R.id.btn_Main_Component);
         btnLife.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,17 +42,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnService.setOnClickListener(new View.OnClickListener() {
+        btnComponent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ServiceExampleActivity.class);
+                Intent intent = new Intent(MainActivity.this, ComponentExampleActivity.class);
                 startActivity(intent);
             }
         });
-
-        /*ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        activityMainBinding.setViewModel(new LoginViewModel());
-        activityMainBinding.executePendingBindings();*/
     }
 
     @BindingAdapter({"toastMessage"})
@@ -57,29 +57,4 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(view.getContext(), message, Toast.LENGTH_SHORT).show();
     }
 
-    @BindingAdapter({"lifecycle"})
-    public static void runMe_2(View view, String message) {
-        if (message != null)
-            if(message.equals("Login was successful")){
-                //Toast.makeText(view.getContext(), message.toUpperCase(Locale.ROOT), Toast.LENGTH_SHORT).show();
-                view.getContext().startActivity(new Intent(view.getContext(), LifeCycleExampleActivity.class));
-            }
-        else{
-                Toast.makeText(view.getContext(), message.toUpperCase(Locale.ROOT), Toast.LENGTH_SHORT).show();
-            }
-
-    }
-
-    @BindingAdapter({"service"})
-    public static void runMe_3(View view, String message) {
-        if (message != null)
-            if(message.equals("Login was successful")){
-                //Toast.makeText(view.getContext(), message.toUpperCase(Locale.ROOT), Toast.LENGTH_SHORT).show();
-                view.getContext().startActivity(new Intent(view.getContext(), ServiceExampleActivity.class));
-            }
-            else{
-                Toast.makeText(view.getContext(), message.toUpperCase(Locale.ROOT), Toast.LENGTH_SHORT).show();
-            }
-
-    }
 }
