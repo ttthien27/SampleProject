@@ -4,6 +4,7 @@
     package="com.example.sampleproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name = "android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,19 @@
         android:theme="@style/Theme.SampleProject"
         tools:targetApi="31">
         <activity
-            android:name=".ServiceExampleActivity"
+            android:name=".view.ContentProviderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FragmentExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ComponentExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BroadcastExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ServiceExampleActivity"
             android:exported="false" />
         <activity
             android:name=".view.LifeCycleExampleActivity"

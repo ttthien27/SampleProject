@@ -1,54 +1,67 @@
 package com.example.sampleproject.view;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 
 import com.example.sampleproject.R;
 
-public class CustomDialog extends Dialog {
+public class CustomDialog extends DialogFragment {
 
-    public Context context;
-    private Button buttonOK;
-    private Button buttonCancel;
+    Button btnUpdate;
+    Button btnClose;
 
-    //private CustomDialog.FullNameListener listener;
+    public CustomDialog() {
+    }
 
-    public CustomDialog(Context context) {
-        super(context);
-        this.context = context;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.custom_dialog_info, container);
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_custom_dialog);
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        this.buttonOK = (Button) findViewById(R.id.button_ok);
-        this.buttonCancel  = (Button) findViewById(R.id.button_cancel);
+        btnClose = (Button) view.findViewById(R.id.btn_close);
+        btnUpdate = (Button) view.findViewById(R.id.btn_update);
 
-        this.buttonOK.setOnClickListener(new View.OnClickListener() {
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //buttonOKClick();
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Update clicked!", Toast.LENGTH_SHORT).show();
             }
         });
-        this.buttonCancel.setOnClickListener(new View.OnClickListener() {
+        btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                buttonCancelClick();
+            public void onClick(View view) {
+                getDialog().dismiss();
             }
         });
     }
 
-    // User click "Cancel" button.
-    private void buttonCancelClick()  {
-        this.dismiss();
-    }
+    /*
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        return new AlertDialog.Builder(requireContext())
+                .setMessage("Dialog")
+                .setPositiveButton("OK", (dialog, which) -> {
+                })
+                .create();
+    }*/
+
+    public static String TAG = "Dialog";
+
 }

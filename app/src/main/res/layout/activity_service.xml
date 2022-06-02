@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ServiceExampleActivity">
 
 
-    <ScrollView
+    <Button
+        android:id="@+id/btn_Service_Start"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="@{()-> viewModel.onLoginClicked()}"
+        android:text="Start"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-
-
-
-
-            <!--Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:onClick="@{()-> viewServiceModel.onStopClicked()}"
-                android:text="STOP"
-                /-->
-
-
-        </LinearLayout>
-
-    </ScrollView>
-</layout>
+    <Button
+        android:id="@+id/btn_Service_Stop"
+        app:layout_constraintTop_toBottomOf="@id/btn_Service_Start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="@{()-> viewModel.onLoginClicked()}"
+        android:text="Stop"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
