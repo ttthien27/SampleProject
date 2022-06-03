@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHomeFragment3"
+    >
+
+    <fragment
+        android:id="@+id/fragmentFirstFragment"
+        android:name="com.example.sampleproject.view.fragment.FragmentFirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" />
+    <fragment
+        android:id="@+id/fragmentSecondFragment"
+        android:name="com.example.sampleproject.view.fragment.FragmentSecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/fragmentThirdFragment"
+        android:name="com.example.sampleproject.view.fragment.FragmentThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/fragmentHomeFragment3"
+        android:name="com.example.sampleproject.view.fragment.FragmentHomeFragment"
+        android:label="fragment_home"
+        app:defaultNavHost="true"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHomeFragment3_to_fragmentFirstFragment"
+            app:destination="@id/fragmentFirstFragment" />
+        <action
+            android:id="@+id/action_fragmentHomeFragment3_to_fragmentThirdFragment"
+            app:destination="@id/fragmentThirdFragment" />
+        <action
+            android:id="@+id/action_fragmentHomeFragment3_to_fragmentSecondFragment"
+            app:destination="@id/fragmentSecondFragment" />
+    </fragment>
+</navigation>

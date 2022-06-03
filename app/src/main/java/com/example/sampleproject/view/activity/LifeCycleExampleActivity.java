@@ -1,4 +1,4 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -11,12 +11,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.sampleproject.R;
+import com.example.sampleproject.view.dialog.CustomDialog;
 
 public class LifeCycleExampleActivity extends AppCompatActivity {
 
     private Button btnDialog;
     private Dialog dialog;
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,6 @@ public class LifeCycleExampleActivity extends AppCompatActivity {
         final CustomDialog dialog = new CustomDialog(this);
         dialog.show();
     }*/
-
 
 
     @Override

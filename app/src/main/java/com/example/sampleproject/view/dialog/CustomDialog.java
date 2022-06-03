@@ -1,4 +1,4 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ServiceExampleActivity">
+    tools:context=".view.activity.ServiceExampleActivity">
 
 
     <Button
         android:id="@+id/btn_Service_Start"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="@{()-> viewModel.onLoginClicked()}"
         android:text="Start"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_Service_Stop"
-        app:layout_constraintTop_toBottomOf="@id/btn_Service_Start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:onClick="@{()-> viewModel.onLoginClicked()}"
         android:text="Stop"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_Service_Start" />
 </androidx.constraintlayout.widget.ConstraintLayout>

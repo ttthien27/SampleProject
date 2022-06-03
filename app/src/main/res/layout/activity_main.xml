@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-        type="com.example.sampleproject.viewmodel.LoginViewModel" />
+            type="com.example.sampleproject.viewmodel.LoginViewModel" />
     </data>
 
     <ScrollView
@@ -55,16 +56,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:onClick="@{()-> viewModel.onLoginClicked()}"
                 android:text="Lifecycle example"
-                />
+                bind:toastMessage="@{viewModel.toastMessage}" />
 
             <Button
                 android:id="@+id/btn_Main_Component"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Component example"
-                />
+                android:text="Component example" />
+
+            <Button
+                android:id="@+id/btn_Main_Navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Navigation example" />
 
         </LinearLayout>
 
