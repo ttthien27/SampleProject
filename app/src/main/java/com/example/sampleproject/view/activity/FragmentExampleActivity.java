@@ -1,4 +1,4 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.sampleproject.R;
+import com.example.sampleproject.view.fragment.FragmentFirstFragment;
+import com.example.sampleproject.view.fragment.FragmentSecondFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ public class FragmentExampleActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,7 +1,5 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.activity;
 
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 
-
 import com.example.sampleproject.R;
 import com.example.sampleproject.databinding.ActivityMainBinding;
 import com.example.sampleproject.viewmodel.LoginViewModel;
 
-import java.util.Locale;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-public class MainActivity extends AppCompatActivity {
+    private Button btnLife, btnComponent, btnNavigation;
 
-    private Button btnLife;
-    private Button btnComponent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,21 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         btnLife = findViewById(R.id.btn_Main_Lifecycle);
         btnComponent = findViewById(R.id.btn_Main_Component);
-        btnLife.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LifeCycleExampleActivity.class);
-                startActivity(intent);
-            }
-        });
+        btnNavigation = findViewById(R.id.btn_Main_Navigation);
 
-        btnComponent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ComponentExampleActivity.class);
-                startActivity(intent);
-            }
-        });
+        btnLife.setOnClickListener(this);
+        btnComponent.setOnClickListener(this);
+        btnNavigation.setOnClickListener(this);
+
     }
 
     @BindingAdapter({"toastMessage"})
@@ -57,4 +44,23 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(view.getContext(), message, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.btn_Main_Lifecycle:
+                intent = new Intent(MainActivity.this, LifeCycleExampleActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_Main_Component:
+                intent = new Intent(MainActivity.this, ComponentExampleActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_Main_Navigation:
+                intent = new Intent(MainActivity.this, NavigationExampleActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+    }
 }

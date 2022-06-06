@@ -4,44 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ComponentExampleActivity">
+    tools:context=".view.activity.ComponentExampleActivity">
+
     <Button
-        android:layout_margin="5dp"
         android:id="@+id/btn_Component_Service"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_marginTop="50dp"
         android:text="Service"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_margin="5dp"
         android:id="@+id/btn_Component_Broadcast"
-        app:layout_constraintTop_toBottomOf="@id/btn_Component_Service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_marginTop="8dp"
         android:text="Broadcast"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_Component_Service" />
 
     <Button
-        android:layout_margin="5dp"
         android:id="@+id/btn_Component_Fragment"
-        app:layout_constraintTop_toBottomOf="@id/btn_Component_Broadcast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_marginTop="8dp"
         android:text="Fragment"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_Component_Broadcast" />
 
     <Button
-        android:layout_margin="5dp"
         android:id="@+id/btn_Component_ContentProvider"
-        app:layout_constraintTop_toBottomOf="@id/btn_Component_Fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_marginTop="8dp"
         android:text="Content Provider"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_Component_Fragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

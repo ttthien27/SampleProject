@@ -58,8 +58,11 @@ public class LoginViewModel extends BaseObservable {
     }
 
     public void onLoginClicked() {
-        if (isInputDataValid())
+        if (isInputDataValid()){
             setToastMessage(successMessage);
+        }
+
+
         else
             setToastMessage(errorMessage);
     }

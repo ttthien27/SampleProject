@@ -1,4 +1,4 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import com.example.sampleproject.viewmodel.AirplaneModeChangeReceiver;
 public class BroadcastExampleActivity extends AppCompatActivity {
 
     AirplaneModeChangeReceiver airplaneModeChangeReceiver = new AirplaneModeChangeReceiver();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

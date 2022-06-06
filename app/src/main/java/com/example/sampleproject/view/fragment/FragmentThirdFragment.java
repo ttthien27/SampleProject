@@ -1,4 +1,4 @@
-package com.example.sampleproject.view;
+package com.example.sampleproject.view.fragment;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.sampleproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentSecondFragment#newInstance} factory method to
+ * Use the {@link FragmentThirdFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentSecondFragment extends Fragment {
+public class FragmentThirdFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class FragmentSecondFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentSecondFragment() {
+    public FragmentThirdFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class FragmentSecondFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentSecondFragment.
+     * @return A new instance of fragment FragmentThirdFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentSecondFragment newInstance(String param1, String param2) {
-        FragmentSecondFragment fragment = new FragmentSecondFragment();
+    public static FragmentThirdFragment newInstance(String param1, String param2) {
+        FragmentThirdFragment fragment = new FragmentThirdFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class FragmentSecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        return inflater.inflate(R.layout.fragment_third, container, false);
     }
 }

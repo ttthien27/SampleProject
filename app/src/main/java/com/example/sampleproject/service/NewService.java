@@ -1,4 +1,4 @@
-package com.example.sampleproject.model;
+package com.example.sampleproject.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -17,9 +17,9 @@ public class NewService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         Log.d("NewService", "onStartCommand: ");
-        player = MediaPlayer.create( this, Settings.System.DEFAULT_RINGTONE_URI );
+        player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
 
-        player.setLooping( true );
+        player.setLooping(true);
 
         player.start();
 
@@ -27,7 +27,6 @@ public class NewService extends Service {
     }
 
     @Override
-
     public void onDestroy() {
         super.onDestroy();
 

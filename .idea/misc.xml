@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_broadcast_example.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_component_example.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_content_provider.xml" value="0.29375" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_fragment_example.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_life_cycle_example.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_main.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_navigation_example.xml" value="0.5" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/activity_service.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/custom_dialog_info.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/example_contraint.xml" value="0.33" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/fragment_first.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/fragment_main.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/fragment_second.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/fragment_third.xml" value="0.25" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/item_contact.xml" value="0.36371308016877635" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/layout/item_document.xml" value="0.12473958333333333" />
+        <entry key="..\:/Users/thien.truong/AndroidStudioProjects/ExampleProject/SampleProject/app/src/main/res/menu/menu_navigation.xml" value="0.12473958333333333" />
         <entry key="..\:/Users/thien.truong/AndroidStudioProjects/SampleProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
         <entry key="..\:/Users/thien.truong/AndroidStudioProjects/SampleProject/app/src/main/res/drawable/bg_shape_logo.xml" value="0.1515" />
         <entry key="..\:/Users/thien.truong/AndroidStudioProjects/SampleProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
